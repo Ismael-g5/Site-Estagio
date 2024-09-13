@@ -3,7 +3,7 @@
         'name' => 'drupal/legacy-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '2a5f817fb1ae8e22226d84c790313db10da6b2ea',
+        'reference' => 'c788a6a5f225fb646ce24582928740ff3c1b1ceb',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -97,6 +97,15 @@
             'reference' => '3.5.0',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../modules/contrib/admin_toolbar',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'drupal/bootstrap_barrio' => array(
+            'pretty_version' => '5.5.16',
+            'version' => '5.5.16.0',
+            'reference' => '5.5.16',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../themes/contrib/bootstrap_barrio',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -310,7 +319,7 @@
         'drupal/legacy-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '2a5f817fb1ae8e22226d84c790313db10da6b2ea',
+            'reference' => 'c788a6a5f225fb646ce24582928740ff3c1b1ceb',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -856,6 +865,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'twbs/bootstrap' => array(
+            'pretty_version' => 'v5.3.3',
+            'version' => '5.3.3.0',
+            'reference' => '6e1f75f420f68e1d52733b8e407fc7c3766c9dba',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../twbs/bootstrap',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'twig/twig' => array(
             'pretty_version' => 'v3.8.0',
             'version' => '3.8.0.0',
@@ -864,6 +882,12 @@
             'install_path' => __DIR__ . '/../twig/twig',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'twitter/bootstrap' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v5.3.3',
+            ),
         ),
     ),
 );
