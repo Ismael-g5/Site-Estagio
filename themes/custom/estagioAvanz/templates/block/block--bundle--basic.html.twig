@@ -37,17 +37,24 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-     <div{{ content_attributes.addClass('content') }}>
-      <img src="{{ path('<front>') }}{{ directory }}/logo.svg" class="img-responsive" draggable="false" />
+	{{ title_prefix }}
+	{% if label %}
+		<h2{{ title_attributes }}>{{ label }}</h2>
+	{% endif %}
+	{{ title_suffix }}
+	{% block content %}
+
+		<div {{ content_attributes.addClass('content') }}>
+      <div class="container container-top">
+        <div class="row row-top-desktop row-top align-items-center justify-content-center d-none d-sm-flex">
+          <div class="col-md-6 col-12 col-top col-top-1 pr-0 text-center">
+            <img src="{{ path('<front>') }}{{ directory }}/logo.svg" class="img-responsive" draggable="false"/>
+          </div>
+          <div class="col-md-6 col-12 col-top col-top-1 pr-0 text-center">
+            {{ drupal_menu('main') }}
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      {{ drupal_menu('main') }}
-    </div>
-  {% endblock %}
+	{% endblock %}
 </div>

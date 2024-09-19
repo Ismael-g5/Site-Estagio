@@ -20,20 +20,12 @@ regions:
   page_bottom: 'Page bottom'
   highlighted: Highlighted
   featured_top: 'Featured top'
+  featured_top_2: 'Featured top 2'
   breadcrumb: Breadcrumb
   content: Content
+  featured_content_3: 'Featured Content 3'
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
-  featured_bottom_first: 'Featured bottom first'
-  featured_bottom_second: 'Featured bottom second'
-  featured_bottom_third: 'Featured bottom third'
-  footer_first: 'Footer first'
-  footer_second: 'Footer second'
-  footer_third: 'Footer third'
-  footer_fourth: 'Footer fourth'
-  footer_fifth: 'Footer fifth'
+  footer: 'Footer'
 
-# Information added by Drupal.org packaging script on 2023-12-03
-version: '5.5.16'
-project: 'bootstrap_barrio'
-datestamp: 1701646129
+
