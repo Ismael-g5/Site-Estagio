@@ -1,0 +1,29 @@
+
+services:
+  drupal:
+    image: drupal:10
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      DB_HOST: sql306.infinityfree.com
+      DB_PORT: 3306
+      DB_NAME: if0_37298691_XXX
+      DB_USER: if0_37298691
+      DB_PASSWORD: avanzEstagio2
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10
+    environment:
+      MYSQL_ROOT_PASSWORD: avanzEstagio2
+      MYSQL_DATABASE: if0_37298691_XXX
+      MYSQL_USER: if0_37298691
+      MYSQL_PASSWORD: avanzEstagio2
+    ports:
+      - "3306"
+
+volumes:
+  drupal-data:

@@ -32,3 +32,11 @@ function estagioAvanz_form_system_theme_settings_alter(&$form, FormStateInterfac
     'bg-transparent' => t('Transparent'),
   ];
 }
+function estagioAvanz_theme_suggestions_block_alter(array &$suggetions, array $variables){
+  if (isset($variables['elements']['content']['#block_content'])){
+    array_splice($suggetions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+  }
+}
+function estagioAvanz_theme_preprocess(&$variables, $hook){
+  $variables['site_logo'] = \Drupal::theme()->getActiveTheme()->getLogo();
+}

@@ -1,0 +1,18 @@
+#Use a imagem oficial do Drupal
+FROM drupal:10
+
+#instale dependências necessárias
+RUN apt-get update && apt-get install -y \
+    git \
+    unzip \
+    vim \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copie o código do Drupal para o diretório do container
+COPY . /var/www/html
+
+# Defina permissões adequadas
+RUN chown -R www-data:www-data /var/www/html
+
+# Exponha a porta padrão do Apache
+EXPOSE 80
