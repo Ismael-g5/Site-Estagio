@@ -47,9 +47,12 @@
 		<div {{ content_attributes.addClass('content') }}>
       <div class="container container-top">
         <div class="row row-top-desktop row-top align-items-center justify-content-center d-none d-sm-flex">
-          <div class="col-md-6 col-12 col-top col-top-1 pr-0 text-center">
+          <div class="col-md-4 col-6 col-top col-top-1 pr-0 text-center">
             <img src="{{ path('<front>') }}{{ directory }}/logo.svg" class="img-responsive" draggable="false"/>
           </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="col-md-6 col-12 col-top col-top-1 pr-0 text-center">
             {{ drupal_menu('main') }}
           </div>
